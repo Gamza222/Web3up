@@ -1,0 +1,181 @@
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@mixin BeforeGradient {
+  content: '';
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(0);
+  width: calc(100%);
+  height: calc(100%);
+  background: conic-gradient(
+    from var(--angle),
+    var(--color-gold-2) 0%,
+    var(--color-gold-1) 13%,
+    var(--color-gold-1) 36%,
+    var(--color-gold-2) 100%
+  );
+  border-radius: 10px;
+  animation: animatedgradient 3s linear infinite;
+}
+
+@mixin Facebook($color, $hoverColor, $width) {
+  width: $width;
+  height: $width;
+  > g {
+    > path {
+      fill: $color;
+      transition: var(--pic-transiction);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      > g {
+        > path {
+          fill: $hoverColor;
+        }
+      }
+    }
+  }
+}
+
+@mixin Instagram($color, $hoverColor, $width) {
+  width: $width;
+  height: $width;
+
+  > g {
+    > path:nth-child(2) {
+      fill: $color;
+      transition: var(--pic-transiction);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      > g {
+        > path:nth-child(2) {
+          fill: $hoverColor;
+        }
+      }
+    }
+  }
+}
+
+@mixin Twitter($color, $hoverColor, $width) {
+  width: $width;
+  height: $width;
+
+  > g {
+    > path:nth-child(2) {
+      fill: $color;
+      transition: var(--pic-transiction);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      > g {
+        > path:nth-child(2) {
+          fill: $hoverColor;
+        }
+      }
+    }
+  }
+}
+@mixin Github($color, $hoverColor, $width) {
+  width: $width;
+  height: $width;
+
+  > g {
+    > path:nth-child(1) {
+      fill: $color;
+      transition: var(--pic-transiction);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      > g {
+        > path:nth-child(1) {
+          fill: $hoverColor;
+        }
+      }
+    }
+  }
+}
+@mixin Discord($color, $hoverColor, $width) {
+  width: $width;
+  height: $width;
+
+  > path:nth-child(2) {
+    fill: $color;
+    transition: var(--pic-transiction);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      > path:nth-child(2) {
+        fill: $hoverColor;
+      }
+    }
+  }
+}
+
+@mixin Twitter($color, $hoverColor, $width) {
+  width: $width;
+  height: $width;
+
+  > g {
+    > path:nth-child(2) {
+      fill: $color;
+      transition: var(--pic-transiction);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      > g {
+        > path:nth-child(2) {
+          fill: $hoverColor;
+        }
+      }
+    }
+  }
+}
+
+@mixin Telegram($color, $hoverColor, $width) {
+  width: $width;
+  height: $width;
+
+  > g {
+    > path:nth-child(2) {
+      fill: $color;
+      transition: var(--pic-transiction);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      > g {
+        > path:nth-child(2) {
+          fill: $hoverColor;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animatedgradient {
+  0% {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
