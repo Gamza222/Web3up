@@ -1,0 +1,69 @@
+@import '../../../../app/styles/mixins/mixins.scss';
+.Section1 {
+  position: relative;
+  @include Section;
+
+  &__content {
+    padding-top: 100px;
+
+    @media screen and (max-width: 1350px) {
+      padding-top: 90px;
+    }
+    @media screen and (max-width: 1000px) {
+      padding-top: 75px;
+    }
+    @media screen and (max-width: 780px) {
+      padding-top: 65px;
+    }
+    @media screen and (max-width: 750px) {
+      padding-top: 60px;
+    }
+    @media screen and (max-width: 500px) {
+      padding-top: 50px;
+    }
+    @media screen and (max-width: 400px) {
+      padding-top: 42px;
+    }
+    @media screen and (max-width: 350px) {
+      padding-top: 36px;
+    }
+    @media screen and (max-width: 300px) {
+      padding-top: 32px;
+    }
+  }
+}
+
+.Background {
+  position: absolute;
+  pointer-events: none;
+  z-index: var(--z-index-bg);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.canvasBgVisible {
+  animation: canvasBgAnimation 2s cubic-bezier(0.075, 0.082, 0.165, 1) forwards;
+}
+
+@keyframes canvasBgAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradientTitle {
+  0% {
+    color: var(--primary-color);
+  }
+  100% {
+    color: transparent;
+  }
+}

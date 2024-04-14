@@ -12,170 +12,77 @@
   transform: translate(-50%, -50%) rotate(0);
   width: calc(100%);
   height: calc(100%);
-  background: conic-gradient(
-    from var(--angle),
-    var(--color-gold-2) 0%,
-    var(--color-gold-1) 13%,
-    var(--color-gold-1) 36%,
-    var(--color-gold-2) 100%
+  background: linear-gradient(
+    90deg,
+    var(--color-gradient-yellow) 0%,
+    var(--color-gradient-pink) 50%,
+    var(--color-gradient-blue) 100%
   );
-  border-radius: 10px;
-  animation: animatedgradient 3s linear infinite;
+  border-radius: 8px;
+  background-size: 200%;
+  animation: animatedGradient 4s ease-in infinite;
+  z-index: var(--z-index-before);
+}
+@mixin AfterGradient {
+  content: '';
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(0);
+  width: calc(100%);
+  height: calc(100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-gradient-yellow) 0%,
+    var(--color-gradient-pink) 50%,
+    var(--color-gradient-blue) 100%
+  );
+  filter: blur(5px);
+  border-radius: 8px;
+  background-size: 200%;
+  animation: animatedGradient 4s ease-in infinite;
+  border-radius: 8px;
 }
 
-@mixin Facebook($color, $hoverColor, $width) {
-  width: $width;
-  height: $width;
-  > g {
-    > path {
-      fill: $color;
-      transition: var(--pic-transiction);
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      > g {
-        > path {
-          fill: $hoverColor;
-        }
-      }
-    }
-  }
-}
-
-@mixin Instagram($color, $hoverColor, $width) {
-  width: $width;
-  height: $width;
-
-  > g {
-    > path:nth-child(2) {
-      fill: $color;
-      transition: var(--pic-transiction);
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      > g {
-        > path:nth-child(2) {
-          fill: $hoverColor;
-        }
-      }
-    }
-  }
-}
-
-@mixin Twitter($color, $hoverColor, $width) {
-  width: $width;
-  height: $width;
-
-  > g {
-    > path:nth-child(2) {
-      fill: $color;
-      transition: var(--pic-transiction);
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      > g {
-        > path:nth-child(2) {
-          fill: $hoverColor;
-        }
-      }
-    }
-  }
-}
-@mixin Github($color, $hoverColor, $width) {
-  width: $width;
-  height: $width;
-
-  > g {
-    > path:nth-child(1) {
-      fill: $color;
-      transition: var(--pic-transiction);
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      > g {
-        > path:nth-child(1) {
-          fill: $hoverColor;
-        }
-      }
-    }
-  }
-}
-@mixin Discord($color, $hoverColor, $width) {
-  width: $width;
-  height: $width;
-
-  > path:nth-child(2) {
-    fill: $color;
-    transition: var(--pic-transiction);
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      > path:nth-child(2) {
-        fill: $hoverColor;
-      }
-    }
-  }
-}
-
-@mixin Twitter($color, $hoverColor, $width) {
-  width: $width;
-  height: $width;
-
-  > g {
-    > path:nth-child(2) {
-      fill: $color;
-      transition: var(--pic-transiction);
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      > g {
-        > path:nth-child(2) {
-          fill: $hoverColor;
-        }
-      }
-    }
-  }
-}
-
-@mixin Telegram($color, $hoverColor, $width) {
-  width: $width;
-  height: $width;
-
-  > g {
-    > path:nth-child(2) {
-      fill: $color;
-      transition: var(--pic-transiction);
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      > g {
-        > path:nth-child(2) {
-          fill: $hoverColor;
-        }
-      }
-    }
-  }
-}
-
-@keyframes animatedgradient {
+@keyframes animatedGradient {
   0% {
-    --angle: 0deg;
+    background-position: 0%;
   }
 
-  to {
-    --angle: 360deg;
+  50% {
+    background-position: 100%;
   }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@mixin Section {
+  &__content {
+    padding: 0 var(--padding-main-sides);
+  }
+}
+
+@mixin Title {
+  font-family: var(--font-family-subMain);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+  width: fit-content;
+  line-height: var(--font-size-3);
+}
+@mixin TitleGradient {
+  font-family: var(--font-family-subMain);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-semibold);
+  background: linear-gradient(
+    90deg,
+    var(--color-gradient-yellow) 0%,
+    var(--color-gradient-pink) 50%,
+    var(--color-gradient-blue) 100%
+  );
+  background-clip: text;
+  width: fit-content;
+  line-height: var(--font-size-3);
+  color: transparent;
 }

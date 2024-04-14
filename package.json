@@ -1,5 +1,5 @@
 {
-  "name": "crypto_concierge",
+  "name": "web3up",
   "homepage": "https://gamza222.github.io/Web3up",
   "version": "1.0.0",
   "description": "",
@@ -45,6 +45,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@svgr/webpack": "^8.1.0",
+    "@types/validator": "^13.11.9",
     "axios": "^1.6.7",
     "babel-plugin-i18next-extract": "^0.10.0",
     "file-loader": "^6.2.0",
@@ -61,6 +62,7 @@
     "react-router-dom": "^6.22.1",
     "serve": "^14.2.1",
     "ts-node": "^10.9.2",
+    "validator": "^13.11.0",
     "webpack-bundle-analyzer": "^4.10.1"
   }
 }

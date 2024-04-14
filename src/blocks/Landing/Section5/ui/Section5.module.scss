@@ -1,0 +1,8 @@
+@import '../../../../app/styles/mixins/mixins.scss';
+
+.Section5 {
+  @include Section;
+  margin-top: 90px;
+  padding-top: 50px;
+  background: var(--color-overlay);
+}

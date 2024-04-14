@@ -1,0 +1,32 @@
+.NavbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media screen and (max-width: 1350px) {
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+  }
+}
+
+.Landing {
+  display: flex;
+  align-items: center;
+}
+
+.NavbarLinkButton {
+  width: 100%;
+
+  &::before {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    > div {
+      a {
+        color: #000;
+      }
+    }
+  }
+}

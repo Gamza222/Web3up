@@ -1,21 +1,25 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 
 import useWindowDimensions from 'shared/lib/hooks/useWindowDimensions/useWindowDimensions';
 
-import { classNames } from 'shared/lib/classNames/classNames';
-import { DimensionsContext } from './providers/DimensionProvider/DimensionsProvider';
+import { Navbar, NavbarMobile } from 'widgets/Navbar';
+
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useElementRect } from 'shared/lib/hooks/useElementRect/useElementRect';
+import { getPageLoaderData, PageLoader } from 'features/PageLoader';
 import { AppRouter } from './providers/Router';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { DimensionsContext } from './providers/DimensionProvider/DimensionsProvider';
+
+import { useSelector } from 'react-redux';
 
 interface AppProps {
   className?: string;
 }
 
 const App = ({ className }: AppProps) => {
+  const { width, height } = useWindowDimensions();
   const appRef = useRef(null);
   const appRect = useElementRect(appRef);
-  const { width, height } = useWindowDimensions();
   const dimensionsProps = useMemo(
     () => ({
       width,
@@ -25,21 +29,24 @@ const App = ({ className }: AppProps) => {
     [width, height, appRect],
   );
 
-  const dispatch = useAppDispatch();
+  const loadingLogo = useSelector(getPageLoaderData).isLoading;
 
-  //   useEffect(() => {
-  //     setInterval(() => {
-  //       return dispatch(counterActions.increment());
-  //     }, 1000);
-  //   });
+  const landing = true;
+
+  const appContentMods: Mods = {
+    'app-content-opened': !loadingLogo,
+  };
 
   return (
     <DimensionsContext.Provider value={dimensionsProps}>
       <div className={classNames('app', {}, [])} ref={appRef}>
-        {/* {width > 1200 ? <Navbar /> : <NavbarMobile />} */}
+        <PageLoader />
 
-        <div className='content-page'>
-          <AppRouter />
+        <div className={classNames('app-content', { ...appContentMods }, [])}>
+          {landing && (width > 1350 ? <Navbar /> : <NavbarMobile />)}
+          <div className='content-page'>
+            <AppRouter />
+          </div>
         </div>
       </div>
     </DimensionsContext.Provider>

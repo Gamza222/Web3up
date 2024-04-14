@@ -4,7 +4,12 @@ import { type CombinedState, type Reducer } from 'redux';
 import { type NavigateOptions, type To } from 'react-router-dom';
 import { createReducerManager } from './ReducerManager';
 import { $api } from 'shared/api/api';
-import { counterReducer } from 'entities/Counter/model/slice/counterSlice';
+import { RegisterReducer } from 'features/Register';
+import { VerifyUserReducer } from 'features/VerifyUser';
+import { LoginReducer } from 'features/Login';
+import { LoginVerifyCodeReducer } from 'features/LoginVerifyCode';
+import { PageLoaderReducer } from 'features/PageLoader';
+import { userReducer } from 'entities/User';
 
 export function createReduxStore(
   initialState?: StateSchema,
@@ -13,14 +18,22 @@ export function createReduxStore(
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
-    counter: counterReducer,
+    //auth
+    Register: RegisterReducer,
+    VerifyUser: VerifyUserReducer,
+    Login: LoginReducer,
+    LoginVerifyCode: LoginVerifyCodeReducer,
+    //auth
+    User: userReducer,
+
+    //feat
+    PageLoader: PageLoaderReducer,
   };
 
   const ReducerManager = createReducerManager(rootReducers);
 
   const extraArg: ThunkExtrArg = {
     api: $api,
-    navigate,
   };
   const store = configureStore({
     reducer: ReducerManager.reduce as Reducer<CombinedState<StateSchema>>,

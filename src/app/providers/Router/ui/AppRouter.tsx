@@ -1,6 +1,6 @@
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 import React, { Suspense, useEffect } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 // import { Loader } from 'widgets/Loader';
 // import { PageLoader } from 'widgets/PageLoader';
 
@@ -11,7 +11,7 @@ const AppRouter = () => {
   useEffect(() => {
     if (
       !Object.values(routeConfig).find(({ element, path }) => {
-        return `/${path}` == url;
+        return `${path}` == url;
       })
     ) {
       navigate('/');

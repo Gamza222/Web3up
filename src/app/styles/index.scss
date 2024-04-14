@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   max-width: 2000px;
   margin: 0 auto;
-  background: var(--overlay-color);
+  background: var(--color-overlay);
   overflow-x: hidden;
 }
 
@@ -26,38 +26,10 @@ body {
     // padding-top: calc(50px - var(--padding-navbar-mobile-top));
   }
 }
-
-.corner {
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  @media screen and (max-width: 1200px) {
-    display: none;
-  }
+.app-content {
+  display: none;
 }
-
-.content-page {
-  margin-top: calc(
-    0 - var(--logo-navbar-height) - var(--padding-navbar-top) * 2
-  );
-  @media screen and (max-width: 1200px) {
-    margin-top: calc(
-      0 - var(--logo-navbar-mobile-height) - var(--padding-navbar-mobile-top) *
-        2
-    );
-  }
-}
-
-.main-loader {
-  top: 0;
-  left: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  width: 100vw;
-  background: var(--overlay-color);
-  position: fixed;
+.app-content-opened {
+  display: block;
+  position: relative;
 }

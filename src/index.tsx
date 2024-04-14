@@ -6,7 +6,7 @@ import 'shared/config/i18n/i18n';
 import App from 'app/App';
 
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter, BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 // import { StoreProvider } from 'app/providers/StoreProvider';
 
@@ -21,13 +21,13 @@ render(
       // <Loader className='main-loader' />
     }
   >
-    <BrowserRouter>
-      <StoreProvider>
+    <StoreProvider>
+      <HashRouter>
         <ErrorBoundary>
           <App />
         </ErrorBoundary>
-      </StoreProvider>
-    </BrowserRouter>
+      </HashRouter>
+    </StoreProvider>
   </Suspense>,
   document.getElementById('root'),
 );
