@@ -21,6 +21,7 @@ const Section5 = ({ className }: Section5Props) => {
 
   return (
     <AnimationBoxScroll
+      id='results'
       className={classNames(cls.Section5, {}, [])}
       visiblePart={20}
       // variants={animationSection5Variants}

@@ -21,3 +21,24 @@
     }
   }
 }
+
+.ButtonType1 {
+  @media screen {
+  }
+  div {
+    > div:nth-child(1) {
+      display: flex;
+      margin-top: -2px;
+    }
+  }
+}
+
+.Link {
+  @media screen and (max-width: 750px) {
+    width: 100%;
+
+    > button {
+      width: 100%;
+    }
+  }
+}

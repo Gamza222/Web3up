@@ -13,24 +13,27 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 interface NavbarMobileNavProps {
   className?: string;
   closing?: boolean;
+  closeNavbar: () => void;
 }
 
-const NavbarMobileNav = memo(({ className, closing }: NavbarMobileNavProps) => {
-  const mods: Mods = {
-    [cls.NavbarMobileNavClosed]: closing,
-  };
-  return (
-    <div className={classNames(cls.NavbarMobileNav, { ...mods }, [])}>
-      <div className={cls.Buttons}>
-        <LoginButton />
-        <RegisterButton />
+const NavbarMobileNav = memo(
+  ({ className, closing, closeNavbar }: NavbarMobileNavProps) => {
+    const mods: Mods = {
+      [cls.NavbarMobileNavClosed]: closing,
+    };
+    return (
+      <div className={classNames(cls.NavbarMobileNav, { ...mods }, [])}>
+        <div className={cls.Buttons}>
+          <LoginButton closeNavbar={closeNavbar} />
+          {/* <RegisterButton closeNavbar={closeNavbar} /> */}
+        </div>
+        <NavbarLinks className={cls.NavbarLinks} closeNavbar={closeNavbar} />
+        <Link to={RoutePath.main} className={cls.Logo}>
+          <LogoPic className={cls.Logo__pic} />
+        </Link>
       </div>
-      <NavbarLinks className={cls.NavbarLinks} />
-      <Link to={RoutePath.main} className={cls.Logo}>
-        <LogoPic className={cls.Logo__pic} />
-      </Link>
-    </div>
-  );
-});
+    );
+  },
+);
 
 export default NavbarMobileNav;

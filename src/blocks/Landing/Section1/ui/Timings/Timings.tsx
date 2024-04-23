@@ -47,7 +47,7 @@ const Timings = memo(({ className }: TimingsProps) => {
       <div className={cls.Timings__item}>
         <PicBox Pic={ZapPic} />
         <p className={cls.Timings__item__text}>
-          Продолжительность - <span>7 недель</span>
+          Продолжительность - <span>4 недели</span>
         </p>
       </div>
     </motion.div>

@@ -22,11 +22,11 @@ render(
     }
   >
     <StoreProvider>
-      <HashRouter>
+      <BrowserRouter>
         <ErrorBoundary>
           <App />
         </ErrorBoundary>
-      </HashRouter>
+      </BrowserRouter>
     </StoreProvider>
   </Suspense>,
   document.getElementById('root'),

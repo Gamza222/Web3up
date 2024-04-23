@@ -1,12 +1,13 @@
 import React from 'react';
 
 import cls from './Section3Content.module.scss';
-import Section3Title from '../Section3Boxes/Section3Title/Section3Title';
-import Section3Text from '../Section3Boxes/Section3Text/Section3Text';
+import Section3Title from '../Section3Title/Section3Title';
+import Section3Text from '../Section3Text/Section3Text';
 import AnimationBoxScroll from 'shared/ui/AnimationBoxScroll/AnimationBoxScroll';
 import ButtonType1 from 'shared/ui/ButtonType1/ButtonType1';
 
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Link } from 'react-router-dom';
 
 interface Section3ContentProps {
   className?: string;
@@ -38,7 +39,9 @@ const Section3Content = ({
         variants={animationTextVariants}
         exitAnimation={exitAnimation}
       >
-        <ButtonType1 text='Записаться на курс' className={cls.ButtonType1} />
+        <Link to='https://t.me/web3up_official' target='_blank'>
+          <ButtonType1 text='Записаться на курс' className={cls.ButtonType1} />
+        </Link>
       </AnimationBoxScroll>
     </div>
   );

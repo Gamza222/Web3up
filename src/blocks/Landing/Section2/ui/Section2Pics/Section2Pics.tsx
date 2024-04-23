@@ -2,8 +2,8 @@ import React from 'react';
 
 import cls from './Section2Pics.module.scss';
 import DotsPic from 'shared/assets/icons/main/DotsBg.svg';
-import ZennoPic1 from 'shared/assets/icons/pngs/ZennoPoster1.png';
-import ZennoPic2 from 'shared/assets/icons/pngs/ZennoPoster2.png';
+import zenoPic1 from 'shared/assets/icons/pngs/Zenno1.png';
+import zenoPic2 from 'shared/assets/icons/pngs/Zenno2.png';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { motion } from 'framer-motion';
@@ -54,7 +54,7 @@ const Section2Pics = ({ className, exitAnimation }: Section2PicsProps) => {
           className={cls.Section2Pics__pic1__img}
           exit={animationExit}
         >
-          <img src={ZennoPic2} alt='' />
+          <img src={zenoPic1} alt='' />
         </AnimationBoxScroll>
       </div>
       <div className={cls.Section2Pics__pic2}>
@@ -65,7 +65,7 @@ const Section2Pics = ({ className, exitAnimation }: Section2PicsProps) => {
           className={cls.Section2Pics__pic1__img}
           exit={animationExit}
         >
-          <img src={ZennoPic2} alt='' />
+          <img src={zenoPic2} alt='' />
         </AnimationBoxScroll>
       </div>
     </div>

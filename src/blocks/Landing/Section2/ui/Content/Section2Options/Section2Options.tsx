@@ -39,7 +39,7 @@ const Section2Options = ({
         <div className={cls.Section2Options__item}>
           <CheckSignPic className={cls.Section2Options__item__pic} />
           <p className={cls.Section2Options__item__text}>
-            Полная автоматизация браузера
+            Полная автоматизация действий в браузере
           </p>
         </div>
       </AnimationBoxScroll>
@@ -52,7 +52,7 @@ const Section2Options = ({
         <div className={cls.Section2Options__item}>
           <CheckSignPic className={cls.Section2Options__item__pic} />
           <p className={cls.Section2Options__item__text}>
-            Полная автоматизация браузера
+            Создание скриптов без знания языков программирования
           </p>
         </div>
       </AnimationBoxScroll>
@@ -65,7 +65,20 @@ const Section2Options = ({
         <div className={cls.Section2Options__item}>
           <CheckSignPic className={cls.Section2Options__item__pic} />
           <p className={cls.Section2Options__item__text}>
-            Полная автоматизация браузера
+            Быстрый и легкий запуск сохраненных профилей
+          </p>
+        </div>
+      </AnimationBoxScroll>
+      <AnimationBoxScroll
+        visiblePart={10}
+        variants={animationTextVariants}
+        exitAnimation={exitAnimation}
+        className={classNames(cls.Section2Options, {}, [])}
+      >
+        <div className={cls.Section2Options__item}>
+          <CheckSignPic className={cls.Section2Options__item__pic} />
+          <p className={cls.Section2Options__item__text}>
+            Запуск заданий по расписанию
           </p>
         </div>
       </AnimationBoxScroll>

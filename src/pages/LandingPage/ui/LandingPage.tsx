@@ -8,6 +8,10 @@ import { Section2 } from 'blocks/Landing/Section2';
 import { Section3 } from 'blocks/Landing/Section3';
 import { Section4 } from 'blocks/Landing/Section4';
 import { Section5 } from 'blocks/Landing/Section5';
+import { Section6 } from 'blocks/Landing/Section6';
+import { Section7 } from 'blocks/Landing/Section7';
+import { Section8 } from 'blocks/Landing/Section8';
+import { Footer } from 'blocks/Landing/Footer';
 
 interface LandingPageProps {
   className?: string;
@@ -21,6 +25,10 @@ const LandingPage = ({ className }: LandingPageProps) => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section6 />
+      <Section7 />
+      <Section8 />
+      <Footer />
     </div>
   );
 };

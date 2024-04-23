@@ -26,8 +26,8 @@ const Section3 = ({ className }: Section3Props) => {
       setExit={setterExitAnimation}
     >
       <div className={cls.Section3__content}>
+        <Section3Boxes exitAnimation={exitAnimation} />
         <Section3Content exitAnimation={exitAnimation} />
-        <Section3Boxes />
       </div>
     </AnimationBoxScroll>
   );

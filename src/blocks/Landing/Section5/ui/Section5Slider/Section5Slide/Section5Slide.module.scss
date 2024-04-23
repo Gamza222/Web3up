@@ -23,7 +23,6 @@
 
   &__subtitle {
     @media screen and (max-width: 950px) {
-      text-align: center;
     }
   }
 }
@@ -34,7 +33,7 @@
   align-items: center;
 
   @media screen and (max-width: 950px) {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 .TitleGradient {

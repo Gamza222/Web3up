@@ -33,3 +33,26 @@ body {
   display: block;
   position: relative;
 }
+.Toastify__toast-body > div:last-child {
+  color: var(--color-gray4);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

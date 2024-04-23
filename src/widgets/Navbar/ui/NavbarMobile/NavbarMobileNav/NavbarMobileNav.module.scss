@@ -3,6 +3,7 @@
   height: calc(
     100vh - 2px - (var(--logo-height) + 2 * var(--padding-navbar-top))
   );
+  overflow: auto;
   top: calc(var(--logo-height) + 2 * var(--padding-navbar-top) + 2px);
   background: var(--color-navbar-overlay);
   width: 100%;

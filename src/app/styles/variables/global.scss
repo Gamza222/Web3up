@@ -23,7 +23,7 @@
   --font-size-2: 34px;
   --font-size-3: 56px;
   --font-size-4: 19px;
-  --font-size-5: 30px;
+  --font-size-5: 27px;
   --font-size-6: 40px;
   --font-size-7: 105px;
 
@@ -38,7 +38,7 @@
 
   //Paddings
   --padding-main-sides: 120px;
-  --padding-navbar-top: 35px;
+  --padding-navbar-top: 25px;
   --margin-navbar-bottom: 80px;
 
   //indexes
@@ -92,6 +92,7 @@
     --font-size-2: 32px;
     --font-size-3: 54px;
     --font-size-4: 18px;
+    --font-size-5: 25px;
     --font-size-7: 95px;
 
     //widths
@@ -100,7 +101,7 @@
 
     //Paddings
     --padding-main-sides: 80px;
-    --padding-navbar-top: 35px;
+    --padding-navbar-top: 20px;
     --margin-navbar-bottom: 80px;
   }
 }
@@ -112,9 +113,12 @@
     --font-size-2: 30px;
     --font-size-3: 50px;
     --font-size-4: 16px;
-    --font-size-5: 30px;
+    --font-size-5: 23px;
     --font-size-6: 40px;
     --font-size-7: 85px;
+
+    //heights
+    --logo-height: 44px;
   }
 }
 
@@ -125,7 +129,7 @@
     --font-size-2: 25px;
     --font-size-3: 45px;
     --font-size-4: 15px;
-    --font-size-5: 30px;
+    --font-size-5: 20px;
     --font-size-6: 40px;
     --font-size-7: 80px;
 
@@ -134,8 +138,11 @@
     --lesson-2: 16px;
     //Paddings
     --padding-main-sides: 70px;
-    --padding-navbar-top: 25px;
+    --padding-navbar-top: 20px;
     --margin-navbar-bottom: 75px;
+
+    //heights
+    --logo-height: 40px;
   }
 }
 
@@ -146,7 +153,7 @@
     --font-size-2: 23px;
     --font-size-3: 40px;
     --font-size-4: 13px;
-    --font-size-5: 30px;
+    --font-size-5: 18px;
     --font-size-6: 40px;
     --font-size-7: 65px;
 
@@ -156,7 +163,7 @@
 
     //Paddings
     --padding-main-sides: 60px;
-    --padding-navbar-top: 25px;
+    --padding-navbar-top: 17px;
     --margin-navbar-bottom: 80px;
   }
 }
@@ -168,14 +175,17 @@
     --font-size-2: 22px;
     --font-size-3: 37px;
     --font-size-4: 13px;
-    --font-size-5: 30px;
+    --font-size-5: 18px;
     --font-size-6: 40px;
     --font-size-7: 65px;
 
     //Paddings
     --padding-main-sides: 60px;
-    --padding-navbar-top: 25px;
+    --padding-navbar-top: 17px;
     --margin-navbar-bottom: 80px;
+
+    //heights
+    --logo-height: 40px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -185,13 +195,13 @@
     --font-size-2: 21px;
     --font-size-3: 35px;
     --font-size-4: 11px;
-    --font-size-5: 30px;
+    --font-size-5: 17px;
     --font-size-6: 40px;
     --font-size-7: 60px;
 
     //Paddings
     --padding-main-sides: 50px;
-    --padding-navbar-top: 25px;
+    --padding-navbar-top: 17px;
     --margin-navbar-bottom: 80px;
   }
 }
@@ -202,14 +212,17 @@
     --font-size-2: 19px;
     --font-size-3: 32px;
     --font-size-4: 10px;
-    --font-size-5: 30px;
+    --font-size-5: 14px;
     --font-size-6: 40px;
     --font-size-7: 45px;
 
     //Paddings
     --padding-main-sides: 45px;
-    --padding-navbar-top: 25px;
+    --padding-navbar-top: 15px;
     --margin-navbar-bottom: 80px;
+
+    //heights
+    --logo-height: 30px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -219,7 +232,7 @@
     --font-size-2: 18px;
     --font-size-3: 29px;
     --font-size-4: 12px;
-    --font-size-5: 30px;
+    --font-size-5: 14px;
     --font-size-6: 40px;
     --font-size-7: 42px;
 
@@ -229,7 +242,7 @@
     --margin-navbar-bottom: 80px;
 
     //heights
-    --logo-height: 35px;
+    --logo-height: 30px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -239,7 +252,7 @@
     --font-size-2: 16px;
     --font-size-3: 27px;
     --font-size-4: 12px;
-    --font-size-5: 30px;
+    --font-size-5: 14px;
     --font-size-6: 40px;
     --font-size-7: 39px;
 
@@ -249,7 +262,7 @@
     --margin-navbar-bottom: 80px;
 
     //heights
-    --logo-height: 35px;
+    --logo-height: 30px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -259,7 +272,7 @@
     --font-size-2: 14px;
     --font-size-3: 27px;
     --font-size-4: 12px;
-    --font-size-5: 30px;
+    --font-size-5: 14px;
     --font-size-6: 40px;
     --font-size-7: 34px;
 
@@ -269,7 +282,7 @@
     --margin-navbar-bottom: 80px;
 
     //heights
-    --logo-height: 35px;
+    --logo-height: 27px;
   }
 }
 @media screen and (max-width: 350px) {
@@ -279,7 +292,7 @@
     --font-size-2: 14px;
     --font-size-3: 26px;
     --font-size-4: 12px;
-    --font-size-5: 30px;
+    --font-size-5: 14px;
     --font-size-6: 40px;
     --font-size-7: 30px;
 
@@ -289,7 +302,7 @@
     --margin-navbar-bottom: 80px;
 
     //heights
-    --logo-height: 35px;
+    --logo-height: 25px;
   }
 }
 @media screen and (max-width: 300px) {
@@ -299,7 +312,7 @@
     --font-size-2: 14px;
     --font-size-3: 25px;
     --font-size-4: 12px;
-    --font-size-5: 30px;
+    --font-size-5: 14px;
     --font-size-6: 40px;
     --font-size-7: 28px;
 
@@ -309,7 +322,7 @@
     --margin-navbar-bottom: 80px;
 
     //heights
-    --logo-height: 35px;
+    --logo-height: 24px;
   }
 }
 

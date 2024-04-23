@@ -12,10 +12,11 @@ interface ButtonType1Props
   text?: string;
   children?: ReactNode;
   navbar?: boolean;
+  video?: boolean;
 }
 
 const ButtonType1 = (props: ButtonType1Props) => {
-  const { className, children, Pic, picClassName, text, navbar } = props;
+  const { className, children, Pic, picClassName, text, navbar, video } = props;
   const mods: Mods = {
     [cls.onNavbar]: navbar,
   };
@@ -29,12 +30,21 @@ const ButtonType1 = (props: ButtonType1Props) => {
           children
         ) : (
           <>
-            {Pic && (
+            {Pic && !video && (
               <Pic
                 className={classNames(cls.ButtonType1__content__pic, {}, [
                   picClassName,
                 ])}
               />
+            )}
+            {Pic && video && (
+              <div>
+                <Pic
+                  className={classNames(cls.ButtonType1__content__pic, {}, [
+                    picClassName,
+                  ])}
+                />
+              </div>
             )}
             <p className={cls.ButtonType1__content__text}>{text}</p>
           </>

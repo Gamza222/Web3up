@@ -1,5 +1,5 @@
 {
-  "name": "web3up",
+  "name": "Web3UP — Автоматизация",
   "homepage": "https://gamza222.github.io/Web3up",
   "version": "1.0.0",
   "description": "",
@@ -45,6 +45,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@svgr/webpack": "^8.1.0",
+    "@types/react-router-hash-link": "^2.4.9",
     "@types/validator": "^13.11.9",
     "axios": "^1.6.7",
     "babel-plugin-i18next-extract": "^0.10.0",
@@ -58,8 +59,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.5",
+    "react-icons": "^5.1.0",
     "react-redux": "^8.1.0",
     "react-router-dom": "^6.22.1",
+    "react-router-hash-link": "^2.4.3",
+    "react-toastify": "^10.0.5",
     "serve": "^14.2.1",
     "ts-node": "^10.9.2",
     "validator": "^13.11.0",

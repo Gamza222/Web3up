@@ -5,8 +5,6 @@ import AnimationBoxScroll from 'shared/ui/AnimationBoxScroll/AnimationBoxScroll'
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import Section2Content from './Content/Section2Content';
-import Section2Text from './Content/Section2Text/Section2Text';
-import ButtonType1 from 'shared/ui/ButtonType1/ButtonType1';
 import Section2Pics from './Section2Pics/Section2Pics';
 
 interface Section2Props {
@@ -26,6 +24,7 @@ const Section2 = ({ className }: Section2Props) => {
   };
   return (
     <AnimationBoxScroll
+      id='program'
       className={classNames(cls.Section2, {}, [])}
       visiblePart={170}
       // variants={animationSection2Variants}

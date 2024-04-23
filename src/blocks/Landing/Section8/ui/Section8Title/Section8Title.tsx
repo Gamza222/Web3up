@@ -1,22 +1,22 @@
 import React from 'react';
-import cls from './Section3Title.module.scss';
+
+import cls from './Section8Title.module.scss';
 import AnimationBoxScroll from 'shared/ui/AnimationBoxScroll/AnimationBoxScroll';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
-interface Section3TitleProps {
+interface Section8TitleProps {
   className?: string;
   exitAnimation: boolean;
 }
 
-const Section3Title = ({ className, exitAnimation }: Section3TitleProps) => {
+const Section8Title = ({ className, exitAnimation }: Section8TitleProps) => {
   const duration = 0.6;
 
   const animationTitleVariants = {
     hidden: { y: '150%', opacity: 0 },
     visible: {
       y: 0,
-
       opacity: 1,
       transition: {
         ease: [0.135, 0.285, 0.335, 1],
@@ -26,7 +26,7 @@ const Section3Title = ({ className, exitAnimation }: Section3TitleProps) => {
     },
   };
   return (
-    <div className={classNames(cls.Section3Title, {}, [])}>
+    <h3 className={classNames(cls.Section8Title, {}, [])}>
       <div className={cls.Part}>
         <div className={cls.Titlewrapper}>
           <AnimationBoxScroll
@@ -34,7 +34,7 @@ const Section3Title = ({ className, exitAnimation }: Section3TitleProps) => {
             variants={animationTitleVariants}
             exitAnimation={exitAnimation}
           >
-            <span>Что </span>
+            <span className={cls.Section8Title}>Часто </span>
           </AnimationBoxScroll>
         </div>
         <div className={cls.Titlewrapper}>
@@ -43,7 +43,7 @@ const Section3Title = ({ className, exitAnimation }: Section3TitleProps) => {
             variants={animationTitleVariants}
             exitAnimation={exitAnimation}
           >
-            <span>такое </span>
+            <span className={cls.Section8Title}>задаваемые </span>
           </AnimationBoxScroll>
         </div>
         <div className={cls.Titlewrapper}>
@@ -52,12 +52,12 @@ const Section3Title = ({ className, exitAnimation }: Section3TitleProps) => {
             variants={animationTitleVariants}
             exitAnimation={exitAnimation}
           >
-            <span className={cls.Section3Title__gradient}>Zennoposter.</span>
+            <span className={cls.Section8Title__gradient}>вопросы</span>
           </AnimationBoxScroll>
         </div>
       </div>
-    </div>
+    </h3>
   );
 };
 
-export default Section3Title;
+export default Section8Title;

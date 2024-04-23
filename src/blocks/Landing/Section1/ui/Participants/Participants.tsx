@@ -33,8 +33,8 @@ const Participants = memo(({ className }: ParticipantsProps) => {
       animate={isLoaded ? 'start' : 'end'}
       variants={TextAnimationVariants}
     >
-      <span className={cls.Participants__span}>60 из 100</span>
-      <p className={cls.Participants__text}>Уже зарегистрированы</p>
+      <span className={cls.Participants__span}>63% мест </span>
+      <p className={cls.Participants__text}>потока уже приобретены</p>
     </motion.div>
   );
 });

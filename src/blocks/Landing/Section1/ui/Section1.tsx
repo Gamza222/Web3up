@@ -3,15 +3,14 @@ import React, { useEffect, useRef } from 'react';
 import cls from './Section1.module.scss';
 
 import Participants from './Participants/Participants';
+import Buttons from './Buttons/Buttons';
+import Timings from './Timings/Timings';
+import Section1Title from './Section1Title/Section1Title';
 
-import { motion, Variants } from 'framer-motion';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useSelector } from 'react-redux';
 import { getPageLoaderData } from 'features/PageLoader';
 import { canvasNodes } from 'shared/lib/CanvasBlob/CanvasBlob';
-import Buttons from './Buttons/Buttons';
-import Timings from './Timings/Timings';
-import Section1Title from './Section1Title/Section1Title';
 
 interface Section1Props {
   className?: string;
@@ -38,7 +37,7 @@ const Section1 = ({ className }: Section1Props) => {
   };
 
   return (
-    <div className={classNames(cls.Section1, {}, [])}>
+    <div className={classNames(cls.Section1, {}, [])} id='what_is_zenoposter'>
       {/* <canvas
         ref={canvasBg}
         className={classNames(cls.Background, { ...canvasMods }, [])}

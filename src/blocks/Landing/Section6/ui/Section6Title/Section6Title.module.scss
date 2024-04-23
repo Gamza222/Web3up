@@ -1,10 +1,14 @@
-@import '../../../../../../app/styles/mixins/mixins.scss';
+@import '../../../../../app/styles/mixins/mixins.scss';
 
-.Section3Title {
+.Section6Title {
   @include Title;
   display: flex;
   flex-wrap: wrap;
   white-space: pre-wrap;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
 
   &__gradient {
     @include TitleGradient;

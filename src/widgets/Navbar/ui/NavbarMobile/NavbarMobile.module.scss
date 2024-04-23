@@ -1,14 +1,15 @@
 .NavbarMobile {
   display: flex;
+  position: fixed;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   padding: var(--padding-navbar-top) var(--padding-main-sides);
   justify-content: space-between;
   background: var(--color-navbar-overlay);
   transform-origin: top center;
-  position: sticky;
   top: 0;
-  left: 0;
+  left: 00;
   z-index: var(--z-index-navbar);
 
   &__top {

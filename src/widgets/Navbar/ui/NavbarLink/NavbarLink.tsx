@@ -10,15 +10,17 @@ interface NavbarLinkProps {
   to: string;
   children: any;
   blank?: boolean;
+  onClick?: () => void;
 }
 
 const NavbarLink = memo(
-  ({ className, blank, to, children }: NavbarLinkProps) => {
+  ({ className, blank = false, to, children, onClick }: NavbarLinkProps) => {
     return (
       <Link
         to={to}
         className={classNames(cls.NavbarLink, {}, [className])}
-        target={blank ? '_blank' : 'default'}
+        target={blank ? '_blank' : '_self'}
+        onClick={onClick}
       >
         <span />
         {children}

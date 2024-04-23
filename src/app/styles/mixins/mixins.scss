@@ -86,3 +86,31 @@
   line-height: var(--font-size-3);
   color: transparent;
 }
+
+@mixin Blob {
+  content: '';
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(255, 205, 112, 0.719) 36%,
+    rgba(200, 80, 192, 0.455) 21%
+  );
+  filter: blur(105px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  z-index: var(--z-index-before);
+  min-width: 300px;
+
+  @media screen and (max-width: 1150px) {
+    background: radial-gradient(
+      circle,
+      rgba(255, 205, 112, 0.719) 5%,
+      rgba(200, 80, 192, 0.455) 61%
+    );
+    filter: blur(120px);
+  }
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+}

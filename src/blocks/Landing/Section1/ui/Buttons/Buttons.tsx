@@ -4,10 +4,12 @@ import cls from './Buttons.module.scss';
 import ButtonType1 from 'shared/ui/ButtonType1/ButtonType1';
 import ButtonType2 from 'shared/ui/ButtonType2/ButtonType2';
 
+import { FaCirclePlay } from 'react-icons/fa6';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { motion, Variants } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import { getPageLoaderData } from 'features/PageLoader';
+import { Link } from 'react-router-dom';
 
 interface ButtonsProps {
   className?: string;
@@ -36,8 +38,25 @@ const Buttons = memo(({ className }: ButtonsProps) => {
       animate={isLoaded ? 'start' : 'end'}
       variants={TextAnimationVariants}
     >
-      <ButtonType2 text='Записаться на курс' className={cls.ButttonType1} />
-      <ButtonType1 text='Узнать подробнее' className={cls.ButttonType1} />
+      <Link
+        to='https://t.me/web3up_official'
+        target='_blank'
+        className={cls.Link}
+      >
+        <ButtonType2 text='Записаться на курс' className={cls.ButtonType2} />
+      </Link>
+      <Link
+        className={cls.Link}
+        to='https://www.youtube.com/watch?v=Ccua8OCxox4'
+        target='_blank'
+      >
+        <ButtonType1
+          Pic={FaCirclePlay}
+          text='Узнать подробнее'
+          className={cls.ButtonType1}
+          video={true}
+        />
+      </Link>
     </motion.div>
   );
 });

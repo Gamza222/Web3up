@@ -128,7 +128,7 @@ const Lesson = ({
       >
         <div className={cls.Content}>
           <LessonContentBox items={contentData} />
-          <LessonContentBox text={contentText} />
+          {/* <LessonContentBox text={contentText} /> */}
         </div>
       </motion.div>
     </AnimationBoxScroll>

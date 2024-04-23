@@ -4,9 +4,8 @@ import ArrowPicType2 from 'shared/ui/ArrowPicType2/ArrowPicType2';
 import AnimationBoxScroll from 'shared/ui/AnimationBoxScroll/AnimationBoxScroll';
 import Section5Slide from './Section5Slide/Section5Slide';
 
-import portfolio1Pic from 'shared/assets/icons/pngs/portfolio1.png';
-import zenoPic1 from 'shared/assets/icons/pngs/ZennoPoster1.png';
-import zenoPic2 from 'shared/assets/icons/pngs/ZennoPoster2.png';
+import ScrollPic from 'shared/assets/icons/pngs/PortfolioScroll.png';
+import PortfolioZkPic from 'shared/assets/icons/pngs/PortfolioZk.png';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import SliderLoader from 'shared/ui/SliderLoader/SliderLoader';
@@ -18,7 +17,7 @@ interface Section5SliderProps {
 
 const Section5Slider = ({ className, exitAnimation }: Section5SliderProps) => {
   const duration = 1;
-  const numOfSlides = 3;
+  const numOfSlides = 2;
   const [slide, setSlide] = useState<number>(1);
   const minusSlide = () => {
     if (slide == 1) {
@@ -70,14 +69,34 @@ const Section5Slider = ({ className, exitAnimation }: Section5SliderProps) => {
           <Section5Slide
             show={slide == 1}
             title={[
-              { text: 'Скрипт активностей в сети ' },
-              { text: 'zkSync ERA/LIGHT', gradient: true },
+              { text: 'СКРИПТ АКТИВНОСТЕЙ В СЕТИ ' },
+              { text: 'SCROLL', gradient: true },
+            ]}
+            subtitle={
+              'Scroll – предназначенная для обеспечения быстрых и недорогих транзакций в Ethereum.'
+            }
+            options={[
+              'более 15 площадок, взаимодействие с 10+ токенами, 25+ смарт-контрактами',
+              'более 10 блоков активностей (swap, mint nft, dmail, pool, liqutity, daily checkin, deploy smart-contract и др.), которые выполняются в абсолютно рандомном порядке, каждый блок индивидуален и не зависит от других (вкл/выкл)',
+              'рандомизация сумм операций в указанных диапазонах для каждого действия',
+              'полное логирование блоков активностей с записью в таблицу',
+              'получение результатов выполнения блоков 3-мя способами, в т.к. через RPC',
+              'посимвольный ввод данных на сайтах, рандомизация тайм-аутов между: блоками действий, кликами и другими взаимодействиями на сайтах',
+            ]}
+            exitAnimation={exitAnimation}
+          />
+          <Section5Slide
+            show={slide == 2}
+            title={[
+              { text: 'СКРИПТ АКТИВНОСТЕЙ В СЕТИ ' },
+              { text: 'ZKSYNC ERA/LITE', gradient: true },
             ]}
             subtitle={
               'zkSync – предназначенная для обеспечения быстрых и недорогих транзакций в Ethereum.'
             }
             options={[
               'более 20 площадок, взаимодействие с 25+ токенами, 50+ смарт-контрактами',
+              'ввод/вывод средств через 4 площадки (bridge)',
               'более 15 блоков активностей (swap, mint nft, dmail, pool, liqutity, daily checkin и др.), которые выполняются в абсолютно рандомном порядке, каждый блок индивидуален и не зависит от других (вкл/выкл)',
               'рандомизация сумм операций в указанных диапазонах для каждого действия',
               'полное логирование блоков активностей с записью в таблицу',
@@ -85,64 +104,25 @@ const Section5Slider = ({ className, exitAnimation }: Section5SliderProps) => {
             ]}
             exitAnimation={exitAnimation}
           />
-          <Section5Slide
-            show={slide == 2}
-            title={[
-              { text: 'Скрипт активностей в сети ' },
-              { text: 'zkSync ERA/LIGHT', gradient: true },
-            ]}
-            subtitle={
-              'zkSync – предназначенная для обеспечения быстрых и недорогих транзакций в Ethereum.'
-            }
-            options={[
-              'более 20 площадок, взаимодействие с 25+ токенами, 50+ смарт-контрактами',
-              'более 15 блоков активностей (swap, mint nft, dmail, pool, liqutity, daily checkin и др.), которые выполняются в абсолютно рандомном порядке, каждый блок индивидуален и не зависит от других (вкл/выкл)',
-              'рандомизация сумм операций в указанных диапазонах для каждого действия',
-            ]}
-            exitAnimation={exitAnimation}
-          />
-          <Section5Slide
-            show={slide == 3}
-            title={[
-              { text: 'Скрипт активностей в сети ' },
-              { text: 'zkSync ERA/LIGHT', gradient: true },
-            ]}
-            subtitle={
-              'zkSync – предназначенная для обеспечения быстрых и недорогих транзакций в Ethereum.'
-            }
-            options={[
-              'более 20 площадок, взаимодействие с 25+ токенами, 50+ смарт-контрактами',
-            ]}
-            exitAnimation={exitAnimation}
-          />
         </div>
         <div className={cls.Section5Slider__content__pic}>
           <AnimationBoxScroll
             className={cls.Section5Slider__content__pic__img}
-            visiblePart={50}
+            visiblePart={300}
             variants={animationButtonsVariants}
             addVisibleOption={slide == 1}
             exitAnimation={exitAnimation}
           >
-            <img src={portfolio1Pic} alt='' />
+            <img src={ScrollPic} alt='' />
           </AnimationBoxScroll>
           <AnimationBoxScroll
             className={cls.Section5Slider__content__pic__img}
-            visiblePart={50}
+            visiblePart={300}
             variants={animationButtonsVariants}
             addVisibleOption={slide == 2}
             exitAnimation={exitAnimation}
           >
-            <img src={zenoPic1} alt='' />
-          </AnimationBoxScroll>
-          <AnimationBoxScroll
-            className={cls.Section5Slider__content__pic__img}
-            visiblePart={50}
-            variants={animationButtonsVariants}
-            addVisibleOption={slide == 3}
-            exitAnimation={exitAnimation}
-          >
-            <img src={zenoPic2} alt='' />
+            <img src={PortfolioZkPic} alt='' />
           </AnimationBoxScroll>
         </div>
       </div>

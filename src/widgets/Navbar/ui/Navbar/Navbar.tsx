@@ -48,7 +48,7 @@ const Navbar = ({ className, mobile = false }: NavbarProps) => {
       <NavbarLinks className={cls.NavbarLinks} />
       <div className={cls.Buttons}>
         <LoginButton />
-        <RegisterButton />
+        {/* <RegisterButton /> */}
       </div>
     </motion.div>
   );

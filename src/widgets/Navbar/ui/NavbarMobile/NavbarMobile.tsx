@@ -65,7 +65,7 @@ const NavbarMobile = ({ className }: NavbarMobileProps) => {
         </Link>
         <Hamburger opened={openedHam} toggleHamburger={toggleMenu} />
       </div>
-      {opened && <NavbarMobileNav closing={closing} />}
+      {opened && <NavbarMobileNav closing={closing} closeNavbar={toggleMenu} />}
     </motion.div>
   );
 };

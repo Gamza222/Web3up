@@ -9,6 +9,7 @@ import Section2Title from './Section2Title/Section2Title';
 import Section2Text from './Section2Text/Section2Text';
 import ButtonType1 from 'shared/ui/ButtonType1/ButtonType1';
 import Section2Options from './Section2Options/Section2Options';
+import { Link } from 'react-router-dom';
 
 interface Section2ContentProps {
   className?: string;
@@ -41,7 +42,9 @@ const Section2Content = ({
         variants={animationTextVariants}
         exitAnimation={exitAnimation}
       >
-        <ButtonType1 text='Записаться на курс' className={cls.ButtonType1} />
+        <Link to='https://t.me/web3up_official' target='_blank'>
+          <ButtonType1 text='Записаться на курс' className={cls.ButtonType1} />
+        </Link>
       </AnimationBoxScroll>
     </div>
   );
